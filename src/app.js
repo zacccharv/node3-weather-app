@@ -6,6 +6,7 @@ const geocode = require("./utils/geocode");
 const forecast = require("./utils/forecast");
 
 const app = express();
+const port = process.env.PORT || 3000;
 
 // Define paths for Express config
 const publicDirectoryPath = path.join(__dirname, "../public");
@@ -17,8 +18,8 @@ app.set("view engine", "hbs");
 app.set("views", viewsPath);
 hbs.registerPartials(partialsPath);
 
-app.listen(3000, () => {
-	console.log(`Example app listening on port 3000.`);
+app.listen(port, () => {
+	console.log(`Example app listening on port ${port}.`);
 });
 
 // Setup static directory to serve
