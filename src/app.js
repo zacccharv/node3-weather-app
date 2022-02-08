@@ -71,7 +71,7 @@ app.get("/weather", function (req, res) {
 			}
 			res.send({
 				location: location,
-				forecast: `${weather_description}. It's currently ${temperature} degrees, but it feels like ${feelslike} degrees, with a humidity level of ${humidity}.`,
+				forecast: `${weather_description}. It's currently ${temperature} degrees, but it feels like ${feelslike} degrees, with a humidity level of ${humidity}%.`,
 				address: req.query.address,
 			});
 		});
